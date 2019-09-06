@@ -1,0 +1,17 @@
+class Person:
+  def __init__(self,name,age): #constructor of the class Person
+    self.name=name;
+    self.age=age;
+
+p1=Person("Suppandi",14)
+p2=Person("Ramu",12)
+
+print("\n Name of Person #1 is",p1.name)
+print("\n Age of person #1 is",p1.age)
+
+print("\n Name of Person #2 is",p2.name)
+print("\n Age of person #2 is",p2.age)
+
+p2.age=10 #attributes of object is modified
+
+print("\nModified age of Person #2 is",p2.age)
