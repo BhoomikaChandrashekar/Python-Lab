@@ -1,0 +1,7 @@
+#Converting a tuple into a list
+
+tuple = (5, 10, 15, 20, 25)
+print(tuple)
+print(tuple[4])
+l=list(tuple)
+print("After converting to a list : ",l)
