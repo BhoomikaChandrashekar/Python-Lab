@@ -1,0 +1,23 @@
+#Using del functions to delete the attributes of an object and the object itself
+
+class Person:
+  def __init__(self,name,age):
+    self.name=name;
+    self.age=age;
+
+p1=Person("Suppandi",14)
+
+print("\nName of Person is",p1.name)
+print("\nAge of Person is",p1.age)
+
+print("\n**Printing after deleting  age attribute for p1**")
+del p1.age #deleting age attribute for p1 object
+print("\n Name of Person is",p1.name)
+#print("\nAge of Person is",p1.age) #Error is: AttributeError:'Person'
+object has no attribute 'age'
+
+
+print("\n**Printing after deleting p1**")
+del p1
+#print("\nName of Person is",p1.name)
+#NameError: name 'p1' is not defined
