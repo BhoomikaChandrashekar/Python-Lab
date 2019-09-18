@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Patient Details</title>
+	</head>
+	<body>		
+		<script>
+			var patient1,i,x="",y="";
+			patient1={
+				"Patient_Name":"John",
+				"Doctor_Name":"Vijay",
+				"Disease":"Typhoid",
+				"Symptoms":["Fever","Vomiting","Headache"]
+			};
+
+			patient2={
+				"Patient_Name":"Rohan",
+				"Doctor_Name":"Rohit",
+				"Disease":"Malaria",
+				"Symptoms":["Fever","Bodypain","Headache","Fatigue"]
+			};
+			document.write("Details of Patient1 : <br>");
+			document.write("Name : "+patient1.Patient_Name+"<br>Doctor : "+patient1.Doctor_Name+"<br>Disease :"+patient1.Disease+"<br>");
+			for(i in patient1.Symptoms){
+				x+=patient1.Symptoms[i]+"  ";
+			}
+			document.write("Symptoms: "+x+"<br><br>");
+
+			document.write("Details of Patient2 : <br>");
+			document.write("Name : "+patient2.Patient_Name+"<br>Doctor : "+patient2.Doctor_Name+"<br>Disease :"+patient2.Disease+"<br>");
+			for(i in patient2.Symptoms){
+				y+=patient2.Symptoms[i]+"  ";
+			}
+			document.write("Symptoms: "+y+"<br><br>");
+			
+		</script>
+	</body>
+</html>
