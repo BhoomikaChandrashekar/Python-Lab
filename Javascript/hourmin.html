@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function hourmin(){
+                var time=parseInt(document.getElementById("inp").value);
+                if(time<60){
+                    document.getElementById("res").innerHTML="00:"+time
+                }
+                else{
+                    var hr=parseInt(time)/60
+                    var mins=time%60
+                    document.getElementById("res").innerHTML=parseInt(hr)+":"+mins;
+
+                }
+              
+            }
+        </script>
+    </head>
+    <body>
+        <p id="res"></p>
+        <input type="number" placeholder="ENTER" id="inp">
+        <button onClick="hourmin()">Submit</button>
+    </body>
+</html>

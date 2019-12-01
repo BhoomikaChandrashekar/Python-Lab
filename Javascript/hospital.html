@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body onload="init()">
+        <div class="wrapper">
+            <div class="hosp">
+                <h1 id="hospame"></h1>
+                <h2 id="hosplocation"></h2>
+                <h3 id="hoverelement" onmouseover="disp()">Patient Details</h3>
+
+            </div>
+        <div class="pat">
+
+        </div>
+
+        </div>
+        <script>
+            var patient=[{
+                "name":"Sam",
+                "aadhaar":123456,
+                "tests":['MRI','Skin Test'],
+            },
+            {
+                "name":"Abc",
+                "aadhaar":91020912,
+                "tests":['Endoscopy','Blood test']
+            }
+        ]
+        var hospital={
+            "name":"Columbia Asia",
+            "location":"Yeshvantpur",
+        };
+        var flag=0;
+        function init(){
+            document.getElementById("hospame").innerHTML=hospital.name;
+            document.getElementById("hosplocation").innerText=hospital.location;
+        }
+        function disp(){
+
+            if(flag==1){
+                return;
+            }
+            document.getElementById("hoverelement").style.color="red"
+            flag=1;
+            var pat=document.querySelector(".pat");
+
+
+            for(var i=0;i<patient.length;i++){
+                var div=document.createElement("div");
+                div.setAttribute('class','deatils');
+                pat.appendChild(div);
+
+                var patname=document.createElement("h3");
+                patname.setAttribute('class','name');
+                patname.textContent="Name :"+patient[i].name;
+                div.appendChild(patname);
+
+                var aadhaar=document.createElement("h3");
+                aadhaar.setAttribute('class','aadhaar');
+                aadhaar.textContent="Aadhaar no. :"+patient[i].aadhaar;
+                div.appendChild(aadhaar);
+
+                var ul=document.createElement("ul");
+                div.appendChild(ul);
+
+                for (var j=0;j<patient[i].tests.length;j++){
+                    li=document.createElement("li");
+                    li.textContent=patient[i].tests[j];
+                    ul.appendChild(li);
+                }
+
+
+            }
+        }
+        
+        
+        </script>
+        
+    </body>
+</html>

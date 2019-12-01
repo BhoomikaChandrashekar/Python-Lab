@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Bakery</h1>
+        <table border=1px>
+            <tr>
+                <th>
+                    Items
+                </th>
+                <th>
+                    Cost
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Puffs
+                </td>
+                <td>
+                    <button onClick='disp("Puffs",30)'>Rs 30</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Biscuits
+                </td>
+                <td>
+                    <button onClick='disp("Biscuits",20)'>Rs 20</button>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Cake
+                </td>
+                <td>
+                    <button onClick='disp("Cake",50)'>Rs 50</button>
+                </td>
+            </tr>
+
+
+        </table>
+        <ul id='res'>
+
+        </ul>
+       <h3 >Total</h3>
+        <p id="disp"> </p>
+        <script>
+            var tot=0;
+            function disp(item,cost){
+                
+                var ul=document.getElementById("res");
+                var li=document.createElement("li");
+                li.appendChild(document.createTextNode(`${item}:${cost}`));
+                ul.appendChild(li);
+                tot+=cost;
+                document.getElementById("disp").innerHTML="Total: "+tot;
+            }
+        </script>
+    
+    </head>
+</html>

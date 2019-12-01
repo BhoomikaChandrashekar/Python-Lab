@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function lettersuround(){
+                var flag=0;
+                var s=document.getElementById("inp").value;
+                l=s.length
+                if((s[0]>='a' && s[0]<='z') || (s[l-1]>='a' && s[l-1]<='z')){
+                    document.getElementById("res").innerHTML='False'
+                    return
+
+                }
+                else{
+                    for (var i=1;i<l-1;i++){
+                        if(s[i]>='a' && s[i]<='z'){
+                            if(s[i-1]!='+' || s[i+1]!='+'){
+                                flag=1
+                                document.getElementById("res").innerHTML='False'
+                                return
+                            }
+                        }
+
+
+                }
+
+                }
+                if(flag==0){
+                    document.getElementById("res").innerHTML='True'
+                }
+                
+            }
+        </script>
+    </head>
+    <body>
+        
+    <p id="res"></p>
+    <input type="text" id="inp" placeholder="Enter">
+    <button onCLick="lettersuround()">Submit</button>
+    </body>
+</html>

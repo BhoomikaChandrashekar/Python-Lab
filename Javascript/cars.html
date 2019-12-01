@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .hidden{
+                display:none;
+            }
+            .display{
+                display:block;
+            }
+            .name{
+                font-size:70px;
+                padding-top:50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+
+        </div>
+        <script>
+            var cars=[{
+                "name":"Corolla",
+                "year":"2000",
+                "model":"v3",
+
+            },
+            {
+                "name":"Duster",
+                "year":"2016",
+                "model":"v2",
+
+            }];
+            var cont=document.querySelector(".container");
+            for (var i=0;i<cars.length;i++){
+                let name=document.createElement("div");
+                name.setAttribute('class','name');
+                name.textContent=`${cars[i].name}`;
+                name.setAttribute('onclick',"disp(this)");
+                cont.appendChild(name)
+
+                let details=document.createElement("div");
+                details.setAttribute('class',`hidden ${cars[i].name}`);
+                details.textContent=`Model: ${cars[i].model}\t Year: ${cars[i].year}`;
+                cont.appendChild(details);
+
+                function disp(car){
+                    var listitem=document.querySelector(`.${car.textContent}`);
+                    listitem.classList.toggle("display");
+
+                }
+
+            }
+        
+
+        </script>
+    </body>
+</html>

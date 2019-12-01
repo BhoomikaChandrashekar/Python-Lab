@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Age convert</title>
+</head>
+
+<body>
+
+    <input type="date" placeholder="Enter date of birth">
+    <button onClick="ageConvert()">Find Age</button>
+    <p>AGE: <span></span></p>
+
+    <script type="text/javascript">
+
+        function ageConvert() {
+            var date = document.querySelector("input").value;
+            //console.log(dob);
+            var dob = [];
+            var dob = date.split("-");
+            var today = new Date();
+            var age = today.getFullYear() - dob[0];
+            if (today.getMonth() < dob[1] || (today.getMonth() == dob[1] && today.getDate() < dob[3])) {
+                age--;
+            }
+            document.querySelector("span").innerText = age + " years";
+
+        }
+    </script>
+
+</body>
+
+</html>

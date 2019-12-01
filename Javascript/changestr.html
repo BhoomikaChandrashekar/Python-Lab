@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function changestr(){
+               var s=document.getElementById("inp").value;
+                l=s.length;
+                var temp=" "
+                for (var i=0;i<l;i++){
+                    var ch=s[i]
+                    if(ch=='z'){
+                        temp=temp+'A';
+                    }
+                   else{
+                    if(ch>='a' && ch<='z'){
+                        var ch1=s.charCodeAt(i)+1;
+                        var ch2=String.fromCharCode(ch1);
+                        if(ch2=='a'|| ch2=='e'||ch2=='i'||ch2=='o'||ch2=='u'){
+                            temp=temp+ch2.toUpperCase()
+
+                        }
+                        else{
+                            temp=temp+ch2
+                        }
+
+                    }
+                    else{
+                        temp=temp+ch;
+                    }
+                   
+                }
+                document.getElementById("res").innerHTML=temp;
+
+
+            }
+            }
+        </script>
+    </head>
+    <body>
+        <p id="res"></p>
+        <input type="text" id="inp" placeholder="Enter text">
+        <button onClick="changestr()">Submit</button>
+    </body>
+</html>

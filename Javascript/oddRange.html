@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <title>OddRange</title>
+    </head>
+    
+    <body>
+            <script type="text/javascript">
+                function OddRange (){
+                    var a=parseInt(document.getElementById("c").value);
+                    var b=parseInt(document.getElementById("d").value);
+                    var i,k;
+                    var x=" ";
+                    for(i=a+1;i<b;i++){
+                        if(i%2!=0)
+                        x+=String(i)+" "
+                    }
+                    document.getElementById("hi").innerHTML=x;
+                   
+                }
+            </script>
+        <p id="hi"></p>
+        <input type="number" placeholder="Enter start" id="c">
+        <input type="number" placeholder="Enter end" id="d">
+        <button onClick="OddRange()">Submit</button>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <ul id="res">
+
+        </ul>
+
+  <p></p>
+    <script>
+        var col=[{
+            "color":"blue",
+            "code":"#0000ff",
+        },
+        {
+            "color":"tomato",
+            "code":"#ff6347",
+        }
+        ];
+        var x="",i;
+        for( i in col){
+            x+=`<li style="background-color:${col[i].code}">`+"The color is "+col[i].color+"<br></li>";
+            x+=`<p style="color:${col[i].code}">`+col[i].code+"</p>"
+            
+        }
+        document.getElementById("res").innerHTML=x;
+    </script>
+      </head>
+      <style>
+          #res{
+              width:40%;
+          }
+      </style>
+</html>
