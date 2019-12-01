@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head> 
+	<script type="text/javascript">
+		function mult(){
+			num1=document.getElementById("first number").value;
+			num2=document.getElementById("second number").value;
+			if(num1 && num2 && num1>0 && num2>0)
+			{
+				document.getElementById("result").innerHTML=num1*num2;
+			}
+			else{
+				document.getElementById("result").innerHTML="Enter valid positive numbers";
+			}
+	}
+		function add(){
+			num1=parseInt(document.getElementById("first number").value);
+			num2=parseInt(document.getElementById("second number").value);
+			if(num1 && num2 && num1>0 && num2>0)
+			{
+				document.getElementById("result").innerHTML=num1+num2;
+			}
+			else{
+				document.getElementById("result").innerHTML="Enter valid positive numbers";
+			}
+	}
+	</script>
+	<title>Sum and product of two numbers</title>
+	<style type="text/css">
+	body{
+		text-align:center;
+		color: #660066;
+		margin:30px;
+		background-color:#c1b5e3;
+		font-family:Sans-serif;
+		}
+	div{
+		padding:20px;
+	}
+	input{
+		padding:5px;
+		border-radius: 8px;
+		margin:10px;
+		border:black;
+		
+	}
+
+
+	</style>
+</head>
+	<body>
+		<h2>Simple calculator that performs addition and multiplication</h2>
+		<form>
+			<div>1st number:<input type="text" id="first number" /><br></div>
+			<div>2nd number:<input type="text" id="second number"/><br></div>
+			<input type="button" onClick="mult()" value="Multiplication"/>
+			<input type="button" onClick="add()" value="Addition"/>
+		</form>
+		<h3> 
+			The result is: <br>
+			<span id="result"></span>
+		</h3>
+	</body>
+</html>
+		
+
+		
+				
+			
+			
+
+		
+	 
