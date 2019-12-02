@@ -52,4 +52,18 @@
 ### Screenshots
 #### Data Science
 ![alt tab](https://github.com/BhoomikaChandrashekar/Python-Lab/blob/master/Data%20Science/Screenshot%20(29).png)
+
 ![alt tab](https://github.com/BhoomikaChandrashekar/Python-Lab/blob/master/Data%20Science/Screenshot%20(30).png)
+
+#### Python
+![alt tab](https://github.com/BhoomikaChandrashekar/Python-Lab/blob/master/python/Screenshot%20(31).png)
+
+#### Javascript
+![alt tab](https://github.com/BhoomikaChandrashekar/Python-Lab/blob/master/Javascript/Screenshot%20(32).png)
+
+#### Flask
+![alt tab](https://github.com/BhoomikaChandrashekar/Python-Lab/blob/master/Flask/Screenshot%20(33).png)
+
+
+
+
