@@ -51,4 +51,5 @@
 
 ### Screenshots
 #### Data Science
-![alt tab]()
+![alt tab](https://github.com/BhoomikaChandrashekar/Python-Lab/blob/master/Data%20Science/Screenshot%20(29).png)
+![alt tab](https://github.com/BhoomikaChandrashekar/Python-Lab/blob/master/Data%20Science/Screenshot%20(30).png)
